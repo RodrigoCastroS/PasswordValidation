@@ -21,7 +21,7 @@ input[type=submit] {
   padding: 20px;
 }
 
-/* El mensaje aparece cuando el usuario hace click en el input password */
+/* Estilo en mensaje que aparece cuando el usuario hace click en el input password */
 #message {
   display:none;
   background: #f1f1f1;
@@ -36,24 +36,12 @@ input[type=submit] {
   font-size: 18px;
 }
 
-/* Añadir color verde y un tick cuando los requerimientos estan bien */
-.valid {
+/* Añadir texto en color verde los requerimientos estan bien */
+.valido {
   color: green;
 }
 
-/* .valid:before {
-  position: relative;
-  left: -35px;
-  content: "✔";
-} */
-
-/* Añadir color rojo y una "x" cuando los requerimientos estan mal */
+/* Añadir texto en color rojo los requerimientos estan mal */
 .invalido {
   color: red;
 }
-
-/* .invalido:before {
-  position: relative;
-  left: -35px;
-  content: "✖";
-} */

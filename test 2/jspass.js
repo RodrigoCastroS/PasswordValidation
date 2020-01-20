@@ -1,6 +1,4 @@
 
-console.log('hola');
-
 //Definicion de variables para acceder al DOM
 var myInput = document.getElementById("psw");
 var letter = document.getElementById("letter");
@@ -8,25 +6,25 @@ var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
 
-// When the user clicks on the password field, show the message box
+// Click en el input password, aparece el mensaje
 myInput.onfocus = function() {
   document.getElementById("message").style.display = "block";
 }
 
-// When the user clicks outside of the password field, hide the message box
+// Click fuera del input password, se esconde el mensaje
 myInput.onblur = function() {
   document.getElementById("message").style.display = "none";
 }
 
-// When the user starts to type something inside the password field
+// Comprobación de campos cuando el usuario empieza a escribir 
 myInput.onkeyup = function() {
   // Validar minúsculas
   var lowerCaseLetters = /[a-z]/g;
   if(myInput.value.match(lowerCaseLetters)) {  
     letter.classList.remove("invalido");
-    letter.classList.add("valid");
+    letter.classList.add("valido");
   } else {
-    letter.classList.remove("valid");
+    letter.classList.remove("valido");
     letter.classList.add("invalido");
   }
   
@@ -34,9 +32,9 @@ myInput.onkeyup = function() {
   var upperCaseLetters = /[A-Z]/g;
   if(myInput.value.match(upperCaseLetters)) {  
     capital.classList.remove("invalido");
-    capital.classList.add("valid");
+    capital.classList.add("valido");
   } else {
-    capital.classList.remove("valid");
+    capital.classList.remove("valido");
     capital.classList.add("invalido");
   }
 
@@ -44,18 +42,18 @@ myInput.onkeyup = function() {
   var numbers = /[0-9]/g;
   if(myInput.value.match(numbers)) {  
     number.classList.remove("invalido");
-    number.classList.add("valid");
+    number.classList.add("valido");
   } else {
-    number.classList.remove("valid");
+    number.classList.remove("valido");
     number.classList.add("invalido");
   }
   
   // Validar la longitud
   if(myInput.value.length >= 8) {
     length.classList.remove("invalido");
-    length.classList.add("valid");
+    length.classList.add("valido");
   } else {
-    length.classList.remove("valid");
+    length.classList.remove("valido");
     length.classList.add("invalido");
   }
 }
